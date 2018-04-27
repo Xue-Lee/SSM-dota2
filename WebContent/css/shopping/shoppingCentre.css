@@ -119,6 +119,7 @@ body{
 	border: 1px solid #DDDDDD;
 	border-radius: 5px;
 	background-color: #ff4c4c;
+	
 }
 .login-reg{
 	/*display: block;*/
@@ -246,7 +247,7 @@ body{
 }
 .shop-login-div a{
 	display: block;
-	float: left;
+	float: right;
 	font-size: 14px;
 	color: #999999;
 }
@@ -264,6 +265,14 @@ body{
 	color: white;
 	background-color: #f85535;
 }
+.shop-login-name, .shop-leave{
+	font-size: 14px;
+	margin-top: 35px;
+}
+.shop-login-name:hover, .shop-leave:hover{
+	color: white;
+}
+
 /*我的订单、关注、购物车-start*/
 .myOrder,.myFocus,.myCart{
 	height: 30px;

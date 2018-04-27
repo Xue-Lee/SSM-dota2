@@ -1,0 +1,104 @@
+
+
+body{
+	background-color: #E0E0E0;
+}
+.as_register{
+	width: 818px;
+	height: auto;
+	background-color: #FFFFFF;
+	margin: 100px auto;
+	padding: 30px 0;
+}
+.as_register h1{
+	font-size: 34px;
+	font-weight: 400;
+	color: #333333;
+	text-align: center;
+	line-height: 34px;
+}
+.as_register h4{
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 14px;
+	color: #999999;
+	text-align: center;
+	
+}
+.as_wrap {
+	width: 396px;
+	height: auto;
+	/*background-color: yellow;*/
+	margin: 50px auto;
+	/*border: 1px solid black;*/
+	/*overflow: hidden;*/
+}
+.tel-b,.email-b{
+	display: block;
+	float: left;
+	width: 198px;
+	height: 46px;
+	text-align: center;
+	line-height: 46px;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: #e4e4e4;
+    color: #666666;
+}
+.email-b{
+	background-color: #d72020;
+	color: white;
+}
+/*.reg-tel{
+	position: relative;
+	top: 80px;
+	left: 0;
+	width: 396px;
+	height: 400px;
+	background-color: aquamarine;
+	display: none;
+}*/
+.reg-email{
+	/*position: relative;*/
+	margin-top: 80px;
+	width: 396px;
+	height: auto;
+	/*background-color: #A06CDF;*/	
+}
+.in-email span,.in-pwd span,.in-rpwd span,.in-name span,.in-idNumber span,.in-phone span{
+	position: relative;
+	left: 410px;
+	top: -28px;
+}
+.in-email,.in-pwd,.in-rpwd,.in-name,.in-idNumber,.in-phone{
+	width: 396px;
+	height: 35px;
+	border: 1px solid #dbdbdb;
+	/*overflow: hidden;*/
+	margin-bottom: 15px;
+}
+.in-email input,.in-pwd input,.in-rpwd input,.in-name input,.in-idNumber input,.in-phone input {
+	width: 360px;
+	margin-top: 2px;
+	height: 30px;
+	margin-left: 10px;
+	outline: none;
+	border: none;
+	color: #666;
+	font-size: 14px;
+}
+
+.in-submint input{
+	width: 396px;
+	height: 42px;
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 3px;
+	background-color: #D72021;
+	color:white;
+	cursor:pointer;
+	outline: none;
+	border: none;
+}
+

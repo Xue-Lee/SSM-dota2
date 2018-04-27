@@ -9,14 +9,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE html>
 <html>
 	<head>
-	<base href="<%=basePath%>">
-		<meta charset="utf-8" />
-		<title>神秘商城</title>
-		<link rel="stylesheet" type="text/css" href="css/shopping/shoppingCentre.css"/>
-		<link rel="stylesheet" type="text/css" href="css/shopping/iconfont.css"/>		
+		<meta charset="UTF-8">
+		<title>游戏手办</title>
+		<link rel="stylesheet" type="text/css" href="css/shopping/shoppingCentre.css" />
+		<link rel="stylesheet" type="text/css" href="css/shopping/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="css/shopping/game.css" />
 		<script type="text/javascript" src="js/shopping/jquery-3.2.1.js" charset="UTF-8"></script>
-		<script type="text/javascript" src="js/shopping/shoppingCentre.js">			
+		<script type="text/javascript" src="js/shopping/showProduct.js">			
 		</script>
 	</head>
 	<body>
@@ -151,7 +150,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="shop-nav-box">
 						<div class="shop-nav-div">
 							<a class="shoppingCentre shop_nav_a" href="shoppingCentre.html" style="border-bottom-color:  #f85535; color:  #f85535;">首页</a>
-							<a class="game shop_nav_a" href="showProduct.do?classId=1">游戏手办</a>
+							<a class="game shop_nav_a" href="showProduct.do?classId=1" href="className.do?id=1">游戏手办</a>
 							<a class="subject shop_nav_a" href="showProduct.do?classId=2">主题服饰</a>
 							<a class="T_shit shop_nav_a" href="showProduct.do?classId=3">创意T恤</a>
 							<a class="toy shop_nav_a" href="showProduct.do?classId=4">毛绒玩具</a>
@@ -168,190 +167,54 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div>
 			<!--头部悬浮导航条-end-->
-			
-			<!--主要内容-start-->
-			<div class="shop-homepage-content" id="shop_homepage_content">
-				<!--耳机大图片-start-->
-				<div class="img-change-div" id="imgChangeDiv">
-					<a href="#">
-						<img class="img-change" name="imgChange" src="img/shopping/steelseries耳机.jpg" style="opacity: 1;"/>
-					</a>
-					<a href="#">
-						<img class="img-change" name="imgChange" src="img/shopping/Q版手办.jpg" style="opacity: 0;"/>
-					</a>
-					<a href="#">
-						<img class="img-change" name="imgChange" src="img/shopping/圣诞限量神秘珍藏.jpg" style="opacity: 0;"/>
-					</a>
-					<a href="#">
-						<img class="img-change" name="imgChange" src="img/shopping/神秘商店的新年礼物.jpg" style="opacity: 0;"/>
-					</a>
-					<ul>
-						<a href=""><li name="liChange" style="background-color: #f85535;"></li></a>
-						<a href=""><li name="liChange"></li></a>
-						<a href=""><li name="liChange"></li></a>
-						<a href=""><li name="liChange"></li></a>
-					</ul>
-				</div>
-				<!--耳机大图片-end-->
-				
-				<!--产品图片-start-->
-				<div class="product-img">
-					<a href="#">
-						<div>
-							<img src="img/shopping/大师赛雨伞.png" alt="" />
-						</div>
-					</a>
-					<a href="#">
-						<div>
-							<img src="img/shopping/Q版手办.png" alt="" />
-						</div>
-					</a>
-					<a href="#">
-						<div>
-							<img src="img/shopping/购买冲锋衣即赠变色马克杯.png" alt="" />
-						</div>
-					</a>
-				</div>
-				<!--产品图片-end-->
-				
-				<!--热门商品-start-->
-				<div class="product-hot">
-					<div class="product-hot-title">
-						最近热销
-						<div class="color-block"></div>
-					</div>
-					<div class="product-hot-goods">												
-						<a href="">
-							<div>
-								<img src="img/shopping/2017国际邀请赛主题背包.png" alt="" />
-							</div>
-						</a>
 						
-						<a href="">
-							<div>							
-								<img src="img/shopping/全英雄选择主题手机壳.jpg" alt="" />							
-							</div>
-						</a>					
-						<a href="">
-							<div>							
-								<img src="img/shopping/主宰抱枕.png" alt="" />							
-							</div>
-						</a>	
-						<a href="">
-							<div>							
-								<img src="img/shopping/DOTA2主题创意T恤.png" alt=""/>							
-							</div>
-						</a>	
-						<a href="">
-							<div>							
-								<img src="img/shopping/潮汐马克杯.png"" />							
-							</div>
-						</a>	
-						<a href="">
-							<div>
-								<img src="img/shopping/英雄至宝金属徽章.png" alt="" />
-							</div>
-						</a>							
+			<!--主要内容-start-->
+			<div class="shop-game-content">
+				<div class="game-nav-div">
+					<div class="game-nav">
+						<a href="">首页</a> > <a href="showProductAll.do">DOTA 2</a>
+						<c:set var="className" scope="request" value="${className}"></c:set>
+						<c:choose>
+							<c:when test="${not empty className}">
+								> <a href="">${className }</a>
+							</c:when> 
+							<c:otherwise></c:otherwise>
+						</c:choose>
 					</div>
 				</div>
-				<!--热门商品-end-->
-				
-				<!--新出商品-start-->
-				<div class="product-new">
-					<div class="product-new-title-div">
-						<div class="product-new-title">
-							新品首售
-							<div class="color-block"></div>
-						</div>
+				<div class="game-product">
+					<div class="sequence-div">
+						<div class="sequence">
+							<a href="#">销量</a>
+							<a href="#">价格<i class="icon-up">&#xe602;</i></a>
+							<a href="#" style="border: 0px;">上架时间</a>
+						</div>						
 					</div>
-					<div class="img-phoneShell-div">
-						<a href="#">
-							<img class="img-phoneShell" src="img/shopping/全英雄选择主题手机克.png" alt="" />
-						</a>
-					</div>
-					<div class="img-poker-div">
-						<a href="#">
-							<img class="img-poker" src="img/shopping/全英雄扑克.png" alt="" />
-						</a>
-					</div>
-					<div class="img-badge-div">
-						<a href="#">
-							<img class="img-badge" src="img/shopping/全英雄金属徽章.png" alt="" />
-						</a>
-					</div>
-				</div>
-				<!--新出商品-start-->
-				<!--限时折扣-start-->
-					<!--<div class="product-discount">
-						<div class="product-discount-title">
-							限时折扣
-							<div class="color-block"></div>
-						</div>
-						<div class="product-discount-goods">
-							<ul>
-								<a href="#">
-									<li>
-										<img src="img/高级冲锋衣.png" alt="" />
-										<h3>DOTA2 - TI7 高级冲锋衣 【欧美码】</h3>
-										<h4>RMB 698.00</h4>
-										<h5>RMB 698.00</h5>
-									</li>
-								</a>								
-								
-								<a href="#">
-									<li>
-										<img src="img/主题选手衣.png" alt="" />
-										<h3>DOTA2 - TI7 主题选手服</h3>
-										<h4>RMB 398.00</h4>
-										<h5>RMB 398.00</h5>
-									</li>
+					<ul class="game-ul">
+						<c:forEach items="${listProduct }" var="pro">
+							<li class="game-li">
+								<div class="li-top">
+									
+									<a href="#"><i class="iconfont icon-likefill1"></i>5</a>
+								</div>
+								<a href="">
+									<img class="game-li-img" src="img/shopping/${pro.productLogo }" alt="" />
 								</a>
-								<a href="#">
-									<li>
-										<img src="img/高级卫衣.png" alt="" />
-										<h3>DOTA2 - TI7 高级卫衣</h3>
-										<h4>RMB 328.00</h4>
-										<h5>RMB 328.00</h5>
-									</li>
-								</a>
-								<a href="#">
-									<li>
-										<img src="img/主题足球衫.png" alt="" />
-										<h3>DOTA2 - TI7 主题足球衫</h3>
-										<h4>RMB 698.00</h4>
-										<h5>RMB 698.00</h5>
-									</li>
-								</a>
-								<a href="#">
-									<li>
-										<img src="img/冶金术士帽子.png" alt="" />
-										<h3>DOTA2 - 冶金术士帽子</h3>
-										<h4>RMB 349.00</h4>
-										<h5>RMB 329.00</h5>
-									</li>
-								</a>
-								<a href="#">
-									<li>
-										<img src="img/主题领带.png" alt="" />
-										<h3>DOTA2 - TI7 主题领带</h3>
-										<h4>RMB 150.00</h4>
-										<h5>RMB 129.00</h5>
-									</li>
-								</a>
-								<a href="#">
-									<li>
-										<img src="img/熊战士毛绒玩具.png" alt="" />
-										<h3>DOTA2 - 熊战士毛绒玩具</h3>
-										<h4>RMB 328.00</h4>
-										<h5>RMB 280.00</h5>
-									</li>
-								</a>
-							</ul>
-						</div>
-					</div>-->
-				<!--限时折扣-end-->											
+								<h4>${pro.productName }</h4>
+								<h5>¥${pro.productPrice }</h5>
+								<div class="add-cart-div">
+									<a class="add-star" href="#"><i class="icon-star">&#xe60e;&#xe60e;&#xe60e;&#xe60e;&#xe60e;</i></a>
+									<a class="add-cart" href="#"><p><i class="icon-gouwuche">&#xe60a;</i> 加入购物车</p></a>
+								</div>
+							</li>
+						</c:forEach>
+						
+						
+					</ul>
+				</div>			
 			</div>
 			<!--主要内容-end-->
+			
 			
 			<!--底部内容-start-->
 			<div class="shop-footer">
